@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title> My portfolio</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="description" content-"personal portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+           * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background-color: #0f172a;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 45px;
+            margin: 0;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            background-color: #1e293b;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* ---------- COMMON SECTION ---------- */
+
+        section {
+            padding: 60px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #2563eb;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            line-height: 1.8;
+            font-size: 17px;
+        
+}
+
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 70px;
+            background-color: white;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h2 {
+            text-align: left;
+            color: #0f172a;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .hero img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+
+        /* ---------- SKILLS ---------- */
+
+        #skills {
+            background-color: #f1f5f9;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .skill-box {
+            background-color: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .skill-box h3 {
+            color: #2563eb;
+            text-align: center;
+        }
+
+        .skill-box li {
+            margin: 10px 0;
+        }
+
+
+        /* ---------- EDUCATION ---------- */
+
+        #education {
+            background-color: white;
+        }
+
+        .education-table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .education-table th,
+        .education-table td {
+            border: 1px solid #cbd5e1;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .education-table th {
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .education-table tr:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+
+
+        /* ---------- FORM ---------- */
+
+        #form {
+            background-color: #f1f5f9;
+        }
+
+        form {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        fieldset {
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            background-color: white;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #2563eb;
+            padding: 0 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        #contact {
+            text-align: center;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        #contact h2 {
+            color: white;
+        }
+
+        #contact a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        #contact p {
+            margin: 15px;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 768px) {
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                text-align: center;
+            }
+
+            .hero img {
+                width: auto;
+                height: 250px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <heder> 
+        <h1 style="text-align: center;">Ankitha</h1>
+   </heder>
+
+   <nav>
+    <a href=#home>Home</a>|
+    <a href=#skills>skills</a>|
+    <a href=#education>education</a>|
+    <a href=#form>form</a>|
+    <a href=#contact>contact</a>|
+   </nav>
+   <section class="about" id="home">
+    <h2>About</h2>
+   <p>I’m <strong>Ankitha</strong>, a B.E. Artificial Intelligence & Data Science student passionate about
+I’m currently developing my skills in Python, Data Analysis, Machine Learning, Java, and Web Development.
+     technology, programming, and building practical solutions with AI.
+ I enjoy learning how technology works, solving problems, and turning ideas into real-world projects.</p>
+<p>Alongside my academics, I’m exploring AI tools, automation, data-driven applications, and modern web technologies to strengthen my technical and problem-solving abilities.</p>
+
+<p>My goal is to continuously learn, build meaningful projects, and grow into a skilled AI & Data Science professional who can create useful and impactful solutions through technology.</p>
+</section>
+<hr>
+<section class="hero">
+
+    <div>
+        <h2>Ankitha Bojjannolla</h2>
+        <p>B.E. Artificial Intelligence & Data Science Student</p>
+        <p>Python | AI | Data Science | Web Development</p>
+    </div>
+
+    <img src="/profile-pc.jpeg.jpeg" alt="Profile picture">
+
+</section>
+  <section id="skills">
+        <h2><b>skills</b></h2>
+        <h3><strong>Technical skills</strong></h3>
+        <ul>
+            <li>Python</li>
+            <li>java</li>
+            <li>html</li>
+            <li>css</li>
+        </ul>
+        <hr>
+        <h3><strong>Communication skills</strong></h3>
+        <ol>
+            <li>Public speaking</li>
+            <li>presentation</li>
+            <li>writing</li>
+            <li>email writing</li>
+        </ol>
+
+        <hr>
+        <h3><strong>Problem solving skills</strong></h3>
+        <ul>
+            <li>Analytical thinking</li>
+            <li>Research</li>
+            <li>critical thinking</li>
+            <li>debugging</li>
+        </ul>
+        </section>
+
+    <section id="education">
+    <h2>Education Details</h2>
+    <style>
+        table{
+            align-items: center;
+        }
+    </style>
+    <table border="1">
+        <tr>
+            <th>Education</th>
+            <th>Institution Name</th>
+            <th>Cgpa/percentage</th>
+        </tr>
+        <tr>
+           <td>BE</td>
+           <td>Stanley college of Engineering</td>
+           <td>92%</td>
+        </tr>
+        <tr>
+            <td>Intermidiate</td>
+            <td>TGRJC</td>
+            <td>97.7%</td>
+            
+        </tr>
+        <tr>
+            <td>School</td>
+            <td>CVRHS</td>
+            <td>95%</td>
+        </tr>
+    </table>
+    </section>
+     <section id="form">
+         <h1>Student form</h1>
+    <form>
+        <fieldset>
+            <legend>Personal information</legend>
+        <label for="name">Full name:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="enter your email"
+            required >
+            <br><br>
+            <label for="password">password:</label>
+            <input
+            type="password"
+            id="password"
+            name="password"
+            required >
+            <br><br>
+            <label for="dob">DOB</label>
+            <input
+            type="date"
+            id="dob"
+            name="dob"
+            >
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Course details</legend>
+                <p>select your course:</p>
+                <label>
+                    <input
+                    type="radio"
+                    name="course"
+                    value="aids"
+                    >
+                    AI&Data science
+                </label>
+
+                  <label>
+                    <input
+                    type="radio"
+                    name="course"
+                    value="cse"
+                    >
+                    computer science
+                </label>
+                <br><br>
+                <label for="skills">Skills:</label>
+                <select id="skills" name="skills">
+                    <option value="select a skill"></option>
+                    <option value="html">html</option>
+                    <option value="sql">sql</option>
+                    <option value="python">python</option>
+
+                </select>
+            </fieldset>
+            <br>
+            <label for="message">About yourself</label>
+            <br>
+            <textarea
+            id="message"
+            name="message"
+            rows="15"
+            cols="40"></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+
+   </form>
+   </section>
+    <section id="contact">
+        <h2 style="color: blue;">Contact</h2>
+        <a href="https://www.linkedin.com/in/ankithabojjannolla/">linkedin</a>
+        <br>
+        <a href="https://mail.google.com/mail/u/0/#inbox">Email</a>
+        <p>location</p>
+        <p>Hyderabad ,Telangana,India</p>
+        </section>
+</body>
+</html
